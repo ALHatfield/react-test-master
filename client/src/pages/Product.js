@@ -18,6 +18,7 @@ class Product extends Component {
         })
     }
 
+
     handleTextChange = text => {
         this.setState({
             text: text
@@ -37,9 +38,17 @@ class Product extends Component {
     }
 
     handleColorOptionChange = (color) => {
+        let currentItem = this.props.product.images.find(image => {
+             return image.color === this.state.color
+        });
+
         this.setState({
-            color: color
+            color: color,
+            src: currentItem.src
         })
+
+        console.log(this.state);
+        
     }
     
 
@@ -93,10 +102,7 @@ class Product extends Component {
 
 
                     <div className="col-12 col-md-6">
-                        {
-                            console.log(this.props.product.images)
-                        }
-                        <ProductImage image={this.state.src} name={name} />
+                        <ProductImage image={this.state.src} name={name} />                        
                     </div>
 
 
