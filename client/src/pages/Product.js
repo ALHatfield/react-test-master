@@ -7,7 +7,9 @@ class Product extends Component {
     state = {
         src: "",
         color: "",
-        text: ""
+        text: "",
+        cartText: "Add to Cart",
+        inCart: false
     }
 
     componentDidMount() {
@@ -38,17 +40,28 @@ class Product extends Component {
     }
 
     handleColorOptionChange = (color) => {
-        let currentItem = this.props.product.images.find(image => {
+        const currentItem = this.props.product.images.find(image => {
              return image.color === this.state.color
         });
 
         this.setState({
             color: color,
             src: currentItem.src
-        })
+        })        
+    }
 
-        console.log(this.state);
-        
+    addToCart = () => {
+        if(!this.state.inCart) {
+            this.setState({
+                cartText: "Loading..."
+            })
+            setTimeout(() => {
+                this.setState({
+                    cartText: "View Cart",
+                    inCart: true
+                })
+            }, 2000)
+        }
     }
     
 
@@ -94,17 +107,23 @@ class Product extends Component {
                             </div>
                         </div>
 
-
-
-                    </div>
-                        
-        
-
+                        <button 
+                            className="btn"
+                            onClick={() => this.addToCart()}>
+                            {this.state.cartText}
+                        </button>
+                        <span>
+                                {
+                                    this.state.inCart
+                                        ? "Item added to cart!"
+                                        : ""
+                                }
+                        </span>
+                    </div>     
 
                     <div className="col-12 col-md-6">
                         <ProductImage image={this.state.src} name={name} />                        
                     </div>
-
 
 
 
