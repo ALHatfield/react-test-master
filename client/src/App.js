@@ -24,7 +24,7 @@ const App = () => {
     details: "so many details",
     discountPrice: 59.99,
     retailPrice: 89.99,
-        })
+  })
   return (
     <div className="App">
       <ProductPage product={product} setProduct={setProduct}/>
