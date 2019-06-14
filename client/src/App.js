@@ -7,8 +7,8 @@ import img2 from './ath-msr7-brown.jpg';
 class App extends Component {
   state = {
     product: {
-      name: "the thing's name",
-      awards: "all the awards",
+      name: "Audio-Technica ATH-MSR7",
+      awards: "2017 all the awards",
       images: [
         {
           src: img1,
@@ -19,8 +19,8 @@ class App extends Component {
           color: "brown"
         }
       ],
-      description: "this thing is great",
-      details: "so many details",
+      description: "this thing is great this thing is great this thing is great this thing is great this thing is great this thing is great ",
+      details: "so many details so many details so many details so many details so many details so many details so many details ",
       discountPrice: 59.99,
       retailPrice: 89.99,
     }
