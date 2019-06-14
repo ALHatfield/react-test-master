@@ -1,0 +1,77 @@
+
+.under-construction {
+    border: 1px lime dotted;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+a {
+    color: black;
+}
+
+
+.container {
+    margin: 0;
+    padding: 0;
+}
+
+.product-panel {
+    padding: 20px 0 0 100px;
+}
+
+.panel {
+    padding: 0;
+}
+
+
+.product-title {
+    padding-bottom: 50px;
+
+}
+.product-nav-item {
+    padding: 0 45px 25px 0;
+}
+.product-price {
+    margin-bottom: 50px;
+}
+
+.product-price span {
+    margin-right: 25px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.retail-price {
+    opacity: 0.2;
+    text-decoration: line-through;
+}
+
+.product-text {
+    padding: 10px 50px 25px 0;
+}
+
+.product-title-award-text{
+    opacity: 0.4;
+}
+
+.product-summary {
+
+}
+
+.product-showcase {
+
+}
+
+
+.product-cart-block {
+    position: relative;
+    bottom: 0;
+    margin-bottom: 100px;
+}
+
+.cart-btn {
+    margin-right: 10px;
+}
+
