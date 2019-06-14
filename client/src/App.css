@@ -1,7 +1,5 @@
 
-.under-construction {
-    border: 1px lime dotted;
-}
+
 
 img {
     max-width: 100%;
@@ -9,16 +7,44 @@ img {
 
 h1 {
     font-weight: bold;
+    font-size: 30px;
+    color: rgba(80,80,80);
 }
 
 a {
     color: black;
 }
 
+.border-bottom-grey {
+    border-bottom: 1px solid rgba(200,200,200,0.5);
+}
+
+.border-right-grey {
+    border-right: 1px solid rgba(200,200,200, 0.5);
+}
+
+.btn {
+    margin-bottom: 25px;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.cart-btn {
+    margin-right: 10px;
+}
+
 
 .container {
     margin: 0;
     padding: 0;
+}
+
+.color-lg {
+    color: rgba(200,200,200, 0.5);
+}
+
+.color-dg {
+    color: rgba(80,80,80);
 }
 
 .product-panel {
@@ -72,10 +98,8 @@ a {
 .product-cart-block {
     position: relative;
     bottom: 0;
-    margin-bottom: 100px;
 }
 
-.cart-btn {
-    margin-right: 10px;
-}
+
+
 

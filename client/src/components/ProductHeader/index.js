@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function ProductHeader(props) { 
     return (
-        <div className="under-construction product-panel">
+        <div className="border-bottom-grey product-panel">
             <div className="product-title">
                 <h1>{props.name}</h1>
                 <div className="product-title-award-text">{props.awards}</div>

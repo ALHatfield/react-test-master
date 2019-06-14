@@ -79,10 +79,10 @@ class Product extends Component {
       return (    
         <div className="product-container container">
           <div className="row">
-            <div className="under-construction panel col-centered col-12 col-lg-6">
+            <div className="panel border-right-grey col-centered col-12 col-lg-6">
 
-              <div className="under-construction product-panel">
-                <a href="#">All products</a>
+              <div className="product-panel">
+                <a href="#"><span className="color-lg">&#8592;</span> <span className="color-dg">All products</span></a>
               </div>
 
               <ProductHeader 
@@ -93,7 +93,7 @@ class Product extends Component {
                 detailActive={this.state.detailActive}
               />
 
-              <div className="product-panel">
+              <div className="border-bottom-grey product-panel">
                 <div className="product-text">
                   {
                     this.state.text === 'description'
@@ -110,7 +110,7 @@ class Product extends Component {
 
                 
                 <div className="dropdown show">
-                  <a className="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a className="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       {this.state.color}
                   </a>
                   <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -140,7 +140,7 @@ class Product extends Component {
               </div>
             </div>     
 
-            <div className="under-construction panel col-centered col-12 col-lg-6">
+            <div className="panel col-centered col-12 col-lg-6">
                 <ProductImage image={this.state.src} name={name} />                        
             </div>
 
