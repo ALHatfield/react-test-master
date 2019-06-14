@@ -5,8 +5,9 @@
 }
 
 img {
-    max-width: 100%;
-    min-width: 500px;
+    /* max-width: 100%; */
+    /* min-width: 500px; */
+    width: 400px;
 }
 
 .product-container {
@@ -14,13 +15,12 @@ img {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    /* justify-content: center; */
 }
 
 .product-panel {
     flex-direction: column;
-    height: 100vh;
-    width: 50vw;
+    /* height: 100vh; */
+    /* width: 50vw; */
     min-width: 400px;
     padding: 0;
     margin: 0;

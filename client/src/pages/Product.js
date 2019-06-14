@@ -130,7 +130,7 @@ class Product extends Component {
           </div>
         </div>     
 
-        <div className="product-panel under-construction">
+        <div className="under-construction product-panel">
           <div className="product-showcase">
             <ProductImage image={this.state.src} name={name} />                        
           </div>
