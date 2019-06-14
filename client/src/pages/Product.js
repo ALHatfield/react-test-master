@@ -28,13 +28,13 @@ class Product extends Component {
 
   renderDescription = () => {
     return(
-      <div>{this.props.product.description}</div>
+      <div className="panel">{this.props.product.description}</div>
     )
   } 
   
   renderDetails = () => {
     return(
-      <div>{this.props.product.details}</div>
+      <div className="panel">{this.props.product.details}</div>
     )
   }
 
@@ -66,75 +66,76 @@ class Product extends Component {
   render() {
     const { name, awards, images, discountPrice, retailPrice, colors } = this.props.product;
     return (    
-      <div className="container product-container">
-          <div className="row">
-            <div className="col-12 col-md-6 product-panel">
-              <div className="product-header under-construction">
-                <ProductHeader
-                  name={name} 
-                  awards={awards} 
-                  handleTextChange={this.handleTextChange} 
-                />
-              </div>            
-              <div className="product-summary under-construction">
+      <div className="product-container">
+        
+        <div className="under-construction product-panel">
+          <div className="under-construction panel">All products</div>
+          <div className="under-construction panel product-header">
+            <ProductHeader
+              name={name} 
+              awards={awards} 
+              handleTextChange={this.handleTextChange} 
+            />
+          </div>            
+          <div className="under-constructionpanel product-summary">
+            {
+              this.state.text === 'description'
+                ? this.renderDescription()
+                : this.renderDetails()
+            }
+            <div className="panel">
+              <span>{discountPrice}</span>
+              <span>{retailPrice}</span>
+              <div>Colors</div>
+          
+            <div className="dropdown show">
+              <a className="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  {this.state.color}
+              </a>
+
+              <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 {
-                  this.state.text === 'description'
-                    ? this.renderDescription()
-                    : this.renderDetails()
+                  this.props.product.images.map((option) => {
+                    return(
+                      <a 
+                        className="dropdown-item" 
+                        href="#"
+                        key={option.color}
+                        onClick={() => this.handleColorOptionChange(option.color)}
+                      >
+                        {option.color}
+                      </a>
+                    )   
+                  })
                 }
-                <div>
-                  <span>{discountPrice}</span>
-                  <span>{retailPrice}</span>
-                </div>
-
-                <div>Colors</div>
-              
-                <div className="dropdown show">
-                  <a className="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      {this.state.color}
-                  </a>
-  
-                  <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    {
-                      this.props.product.images.map((option) => {
-                        return(
-                          <a 
-                            className="dropdown-item" 
-                            href="#"
-                            key={option.color}
-                            onClick={() => this.handleColorOptionChange(option.color)}
-                          >
-                            {option.color}
-                          </a>
-                        )   
-                      })
-                    }
-                  </div>
-                </div>
-              </div>
-              <div className="add-to-cart-block under-construction">
-                <button 
-                  className="btn"
-                  onClick={() => this.addToCart()}>
-                  {this.state.cartText}
-                </button>
-                <span>
-                  {
-                    this.state.inCart
-                      ? "Item added to cart!"
-                      : ""
-                  }
-                </span>
-              </div>
-            </div>     
-
-            <div className="col-12 col-md-6 product-panel">
-              <div className="product-showcase under-construction">
-                <ProductImage image={this.state.src} name={name} />                        
               </div>
             </div>
+            </div>
 
+            
           </div>
+          <div className="under-construction panel product-cart-block">
+            <button 
+              className="btn"
+              onClick={() => this.addToCart()}>
+              {this.state.cartText}
+            </button>
+            <span>
+              {
+                this.state.inCart
+                  ? "Item added to cart!"
+                  : ""
+              }
+            </span>
+          </div>
+        </div>     
+
+        <div className="product-panel under-construction">
+          <div className="product-showcase">
+            <ProductImage image={this.state.src} name={name} />                        
+          </div>
+        </div>
+
       </div>
     );
   }

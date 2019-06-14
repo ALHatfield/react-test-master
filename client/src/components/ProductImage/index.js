@@ -6,7 +6,7 @@ export default function ProductImage(props) {
 
     return (
         <div>
-            <img style={{width: '500px'}} src={image} alt={name}/>
+            <img src={image} alt={name}/>
         </div>
     );
 }
