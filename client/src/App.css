@@ -23,14 +23,16 @@ a {
     border-right: 1px solid rgba(200,200,200, 0.5);
 }
 
+
 .btn {
     margin-bottom: 25px;
     margin-left: 0;
-    padding-left: 0;
 }
 
 .cart-btn {
     margin-right: 10px;
+    padding: 10px 80px 15px 80px;
+
 }
 
 
@@ -45,6 +47,10 @@ a {
 
 .color-dg {
     color: rgba(80,80,80);
+}
+
+.color-options-dropdown {
+    padding-left: 0;
 }
 
 .product-panel {
@@ -80,20 +86,12 @@ a {
 
 .product-text {
     padding: 10px 50px 25px 0;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .product-title-award-text{
     opacity: 0.4;
 }
-
-.product-summary {
-
-}
-
-.product-showcase {
-
-}
-
 
 .product-cart-block {
     position: relative;

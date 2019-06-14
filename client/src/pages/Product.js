@@ -110,7 +110,7 @@ class Product extends Component {
 
                 
                 <div className="dropdown show">
-                  <a className="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a className="color-options-dropdown btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       {this.state.color}
                   </a>
                   <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
